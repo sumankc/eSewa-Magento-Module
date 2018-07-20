@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sumankcdotcom_Esewa>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Sumankcdotcom_Esewa>
+    </modules>
+</config>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Sumankcdotcom_Esewa</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/mit-license.php">MIT License</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Payment gateway esewa integration </summary>
+    <description>Payment gateway esewa integration in magento. esewa is one of the payment gateway in Nepal.</description>
+    <notes>Stable version</notes>
+    <authors><author><name>Suman K.C</name><user>sumankc</user><email>sumankc55@gmail.com</email></author></authors>
+    <date>2016-03-15</date>
+    <time>10:53:54</time>
+    <contents><target name="magelocal"><dir name="Sumankcdotcom"><dir name="Esewa"><dir name="Helper"><file name="Data.php" hash="8f0f876a4fef2673c153e98f417d04dc"/></dir><dir name="Model"><file name="Standard.php" hash="d208edc878fda5163f0da82f37589687"/></dir><dir name="controllers"><file name="PaymentController.php" hash="ed38f5ae233ccb3c7347f9a0d02650ea"/></dir><dir name="etc"><file name="config.xml" hash="90952cab840121ecdb2bd056e09b91fe"/><file name="system.xml" hash="2dbd77f10e5b784efee69d7138d7fb1b"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Sumankcdotcom_Esewa.xml" hash="1e95398348916bae495e62966d357646"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="sumankcdotcom_esewa"><file name="redirect.phtml" hash="87c05456d0530faa36b7a091d1b2f251"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

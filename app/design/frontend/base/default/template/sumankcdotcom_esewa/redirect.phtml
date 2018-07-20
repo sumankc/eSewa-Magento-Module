@@ -1,0 +1,36 @@
+<?php
+/**
+ * Sumankcdotcom_Esewa extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @package        Sumankcdotcom_Esewa
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+$_order = new Mage_Sales_Model_Order();
+$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+$_order->loadByIncrementId($orderId);
+$action = Mage::getStoreConfig('payment/esewa/test_mode')==1?'http://dev.esewa.com.np/epay/main':'http://esewa.com.np/epay/main';
+$service_code = Mage::getStoreConfig('payment/esewa/service_code');
+?>
+<h3>Redirecting to esewa...</h3>
+<form name="esewaform" method="post" action="<?php echo $action;?>">
+	<input value="<?php echo $_order->getBaseGrandTotal(); ?>" name="tAmt" type="hidden">
+	<input value="<?php echo $_order->getSubtotal(); ?>" name="amt" type="hidden"> <!--/ total amount-->
+	<input value="<?php echo $_order->getTaxAmount(); ?>" name="txAmt" type="hidden"> <!--/ tax amount -->
+	<input value="0" name="psc" type="hidden"> <!--/ product service charge -->
+	<input value="<?php echo $_order->getBaseShippingAmount(); ?>" name="pdc" type="hidden"> <!--/product delivery code -->
+	<input value="<?php echo $service_code; ?>" name="scd" type="hidden"> <!--/service code -->
+	<input value="<?php echo $orderId; ?>" name="pid" type="hidden"> <!--/unique id -->
+	<input value="<?php echo Mage::getBaseUrl(); ?>esewa/payment/response?q=su" type="hidden" name="su">
+	<input value="<?php echo Mage::getBaseUrl(); ?>esewa/payment/response?q=fu" type="hidden" name="fu">
+</form>
+<script type="text/javascript">
+document.esewaform.submit();
+</script>
