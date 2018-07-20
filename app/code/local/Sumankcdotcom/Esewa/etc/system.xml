@@ -10,24 +10,6 @@
           <show_in_default>1</show_in_default>
           <show_in_website>1</show_in_website>
           <show_in_store>1</show_in_store>
-          <fields>
-            <field_notification translate="label comment">
-                <label>
-                    <![CDATA[
-                    Esewa payment gateway : eSewa is the online payment gateway of Nepal.. <a href="https://esewa.com.np/static/faq">(more about esewa)</a><br />
-                    - You need to register at <a href="https://esewa.com.np" target="_blank">esewa</a> and get Service code/Merchant id for your business.<br /> 
-                    For customization & Support : <a target="_blank" href="http://sumankc.com/contact">Contact here</a>
-                            ]]>
-                </label>
-                <frontend_type>label</frontend_type>
-                <frontend_model>lowstocknotify/adminhtml_system_config_notification</frontend_model>
-                <margin_top>0px</margin_top>
-                <sort_order>1</sort_order>
-                <show_in_default>1</show_in_default>
-                <show_in_website>1</show_in_website>
-                <show_in_store>1</show_in_store>
-                <comment></comment>
-            </field_notification>
             <active translate="label">
               <label>Enabled</label>
               <frontend_type>select</frontend_type>
