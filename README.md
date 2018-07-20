@@ -1,6 +1,9 @@
 # Magento 1.x eSewa payment gateway module
 
 > This module was previously available as `Sumankcdotcom_Esewa extension` on Magento connect. 
+> * @package        Sumankcdotcom_Esewa
+> * @copyright      Copyright (c) 2016
+> * @license        http://opensource.org/licenses/mit-license.php MIT License
 
 **Payment gateway eSewa integration - a popular payment gateway in Nepal.**
 
